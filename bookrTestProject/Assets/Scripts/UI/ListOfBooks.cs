@@ -17,6 +17,8 @@ public class ListOfBooks : MonoBehaviour
 
     internal void SetBooks(IEnumerable<Book> books)
     {
+        DestroyAllChildren();
+
         int count = 0;
         var currentLine = Instantiate(Line, transform);
         foreach (var book in books)
@@ -30,6 +32,14 @@ public class ListOfBooks : MonoBehaviour
             bookUI.SetBook(book);
             bookUIList.Add(bookUI);
             count++;
+        }
+    }
+
+    private void DestroyAllChildren()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
         }
     }
 }
