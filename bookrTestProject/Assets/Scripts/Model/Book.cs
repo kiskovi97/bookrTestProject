@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Model
 {
-    public struct Book
+    public class Book
     {
         public string imageUrl;
         public string bookName;

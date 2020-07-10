@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BookListPresenter : MonoBehaviour
 {
+    public ListOfBooks ListOfBooks;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,6 @@ public class BookListPresenter : MonoBehaviour
         {
             Debug.Log(book.bookName + " : " + book.imageUrl);
         }
+        ListOfBooks.SetBooks(books);
     }
 }
