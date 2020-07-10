@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Assets.Scripts.Model;
 using UnityEngine;
 
 public class ListOfBooks : MonoBehaviour
 {
-    public List<BookUI> bookUIList = new List<BookUI>();
-
     public GameObject bookUIPrefab;
 
     public int LineCount = 5;
@@ -22,7 +17,6 @@ public class ListOfBooks : MonoBehaviour
             var obj = Instantiate(bookUIPrefab, transform);
             var bookUI = obj.GetComponent<BookUI>();
             bookUI.SetBook(book);
-            bookUIList.Add(bookUI);
         }
     }
 

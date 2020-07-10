@@ -11,9 +11,10 @@ namespace Assets.Scripts.ApiCallers
 {
     public class BookListApiCaller
     {
+        private static readonly string apiBase = @"https://bookrlab.com/test/";
         public static IEnumerator GetBooks(Action<IEnumerable<Book>> callback)
         {
-            UnityWebRequest request = UnityWebRequest.Get("https://bookrlab.com/test/");
+            UnityWebRequest request = UnityWebRequest.Get(apiBase);
 
             yield return request.SendWebRequest();
 

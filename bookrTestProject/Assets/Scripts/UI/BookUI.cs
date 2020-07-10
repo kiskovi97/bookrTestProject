@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Scripts.ApiCallers;
+﻿using Assets.Scripts.ApiCallers;
 using Assets.Scripts.Model;
 using UnityEngine;
 using UnityEngine.UI;
