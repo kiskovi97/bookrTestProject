@@ -15,10 +15,6 @@ public class BookListPresenter : MonoBehaviour
 
     private void BooksGet(IEnumerable<Book> books)
     {
-        foreach (var book in books)
-        {
-            Debug.Log(book.bookName + " : " + book.imageUrl);
-        }
         ListOfBooks.SetBooks(books);
     }
 }
